@@ -1,13 +1,12 @@
 package com.foo.core;
 
-import java.util.Arrays;
-
-public class Stack<E> {
+public class Stack<E> extends AbstractArray<E> {
+    private final static int INITIAL_CAPACITY = 10;
     private int size = 0;
     private Object[] array;
 
     public Stack() {
-        this(10);
+        this(INITIAL_CAPACITY);
     }
 
     public Stack(int initialCapacity) {
@@ -18,13 +17,13 @@ public class Stack<E> {
     }
 
     public E push(E item) {
-        ensureCapacityHelper(size + 1);
+        ensureCapacityHelper(size + 1, (E[]) array);
         array[size++] = item;
         return item;
     }
 
     public E peek() {
-        if (isEmpty()) {
+        if (isEmpty(size)) {
             throw new IndexOutOfBoundsException("stock is empty");
         }
         return (E) array[size - 1];
@@ -34,24 +33,5 @@ public class Stack<E> {
         E item = peek();
         size--;
         return item;
-    }
-
-    private boolean isEmpty() {
-        return size == 0;
-    }
-
-    private void ensureCapacityHelper(int minCapacity) {
-        if (minCapacity > array.length) {
-            grow();
-        }
-    }
-
-    private void grow() {
-        int oldCapacity = array.length;
-        int newCapacity = oldCapacity * 2;
-        if (newCapacity < oldCapacity) {
-            throw new OutOfMemoryError();
-        }
-        array = Arrays.copyOf(array, newCapacity);
     }
 }
