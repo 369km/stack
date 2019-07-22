@@ -38,7 +38,7 @@ public class HashMap<K, V> {
                     return;
                 }
             }
-            Entry<K, V> newEntry = new Entry<>(key, value, entry);
+            Entry<K, V> newEntry = new Entry<>(key, value, table[index]);
             table[index] = newEntry;
             size++;
         }

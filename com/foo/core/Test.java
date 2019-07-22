@@ -34,12 +34,15 @@ public class Test {
     private static void hashMap() {
         HashMap<Integer, String> hashMap = new HashMap<>();
         hashMap.put(1, "val1");
+        hashMap.put(17, "val17");
         hashMap.put(2, "val2");
         hashMap.put(3, "val3");
         hashMap.put(4, "val4");
+        hashMap.remove(1);
         System.out.println(hashMap.get(1));
         System.out.println(hashMap.get(2));
         System.out.println(hashMap.get(3));
         System.out.println(hashMap.get(4));
+        System.out.println(hashMap.get(17));
     }
 }
