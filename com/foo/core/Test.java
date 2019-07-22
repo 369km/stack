@@ -2,7 +2,7 @@ package com.foo.core;
 
 public class Test {
     public static void main(String[] args) {
-        arrayList();
+        hashMap();
 
     }
 
@@ -29,5 +29,17 @@ public class Test {
         arrayList.add("f");
         System.out.println(arrayList.contains("f"));
 
+    }
+
+    private static void hashMap() {
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "val1");
+        hashMap.put(2, "val2");
+        hashMap.put(3, "val3");
+        hashMap.put(4, "val4");
+        System.out.println(hashMap.get(1));
+        System.out.println(hashMap.get(2));
+        System.out.println(hashMap.get(3));
+        System.out.println(hashMap.get(4));
     }
 }
