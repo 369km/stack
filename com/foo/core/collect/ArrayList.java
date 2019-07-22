@@ -1,4 +1,4 @@
-package com.foo.core;
+package com.foo.core.collect;
 
 public class ArrayList<E> extends AbstractArray<E> {
     private final static int INITIAL_CAPACITY = 10;

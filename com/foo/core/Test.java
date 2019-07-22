@@ -1,8 +1,13 @@
 package com.foo.core;
 
+import com.foo.core.collect.ArrayList;
+import com.foo.core.collect.HashMap;
+import com.foo.core.collect.Stack;
+import com.foo.core.instance.SumTwoSub;
+
 public class Test {
     public static void main(String[] args) {
-        hashMap();
+        sumTwoSub();
 
     }
 
@@ -44,5 +49,11 @@ public class Test {
         System.out.println(hashMap.get(3));
         System.out.println(hashMap.get(4));
         System.out.println(hashMap.get(17));
+    }
+
+    public static void sumTwoSub() {
+        SumTwoSub sumTwoSub = new SumTwoSub();
+        int[] b = {1, 3, 5, 7, 9, 15};
+        sumTwoSub.findTwoSubInSum(b, 10);
     }
 }

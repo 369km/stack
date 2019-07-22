@@ -1,4 +1,4 @@
-package com.foo.core;
+package com.foo.core.collect;
 
 import java.util.Arrays;
 

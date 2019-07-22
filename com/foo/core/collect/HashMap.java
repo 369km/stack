@@ -1,4 +1,4 @@
-package com.foo.core;
+package com.foo.core.collect;
 
 public class HashMap<K, V> {
     private final static int DEFUALT_INITIAL_CAPACITY = 1 << 4;
