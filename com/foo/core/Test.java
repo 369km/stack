@@ -4,6 +4,7 @@ import com.foo.core.collect.ArrayList;
 import com.foo.core.collect.HashMap;
 import com.foo.core.collect.Stack;
 import com.foo.core.instance.SumTwoSub;
+import com.foo.core.sort.QuickSort;
 
 public class Test {
     public static void main(String[] args) {
@@ -53,7 +54,7 @@ public class Test {
 
     public static void sumTwoSub() {
         SumTwoSub sumTwoSub = new SumTwoSub();
-        int[] b = {1, 3, 5, 7, 9, 15};
+        int[] b = {1, 5, 3, 9, 7, 15};
         sumTwoSub.findTwoSubInSum(b, 10);
     }
 }
