@@ -24,14 +24,22 @@ public class Stack<E> extends AbstractArray<E> {
 
     public E peek() {
         if (isEmpty(size)) {
-            throw new IndexOutOfBoundsException("stock is empty");
+            throw new IndexOutOfBoundsException("stack is empty");
         }
         return (E) array[size - 1];
     }
 
     public E pop() {
         E item = peek();
+        array[size-1]=null;
         size--;
         return item;
+    }
+
+    public boolean isFull() {
+        return size == array.length;
+    }
+    public int size(){
+        return size;
     }
 }
