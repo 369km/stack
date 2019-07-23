@@ -4,11 +4,12 @@ import com.foo.core.collect.ArrayList;
 import com.foo.core.collect.HashMap;
 import com.foo.core.collect.Stack;
 import com.foo.core.instance.SumTwoSub;
+import com.foo.core.sort.InsertSort;
 import com.foo.core.sort.QuickSort;
 
 public class Test {
     public static void main(String[] args) {
-        sumTwoSub();
+        insertSort();
 
     }
 
@@ -56,5 +57,11 @@ public class Test {
         SumTwoSub sumTwoSub = new SumTwoSub();
         int[] b = {1, 5, 3, 9, 7, 15};
         sumTwoSub.findTwoSubInSum(b, 10);
+    }
+    public static void insertSort(){
+        int[] b = {1, 5, 3, 9, 7,4, 15};
+        InsertSort insertSort = new InsertSort(b);
+        insertSort.sort();
+        System.out.println(b);
     }
 }

@@ -1,5 +1,8 @@
 package com.foo.core.sort;
 
+/**
+ * 快速排序是对冒泡排序的改进，交换次数少，速度快，最慢也是O(n^2),平均速度为O(nlogn),空间为O(logn)
+ */
 public class QuickSort {
     private int[] array;
 
@@ -8,6 +11,9 @@ public class QuickSort {
     }
 
     public void sort() {
+        if (array==null || array.length==0){
+            throw new RuntimeException(" array cant be empty");
+        }
         quickSort(array, 0, array.length - 1);
     }
 
