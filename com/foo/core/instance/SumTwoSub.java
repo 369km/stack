@@ -2,13 +2,11 @@ package com.foo.core.instance;
 
 import com.foo.core.sort.QuickSort;
 
+/**
+ * 找到数组中和为指定值的两个元素
+ */
 public class SumTwoSub {
-    /**
-     * 找到数组中和为指定值的两个元素
-     *
-     * @param array 必须排序
-     * @param sum   两个元素之和
-     */
+
     public void findTwoSubInSum(int[] array, int sum) {
         QuickSort quickSort = new QuickSort(array);
         quickSort.sort();

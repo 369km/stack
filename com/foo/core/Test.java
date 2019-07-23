@@ -3,13 +3,14 @@ package com.foo.core;
 import com.foo.core.collect.ArrayList;
 import com.foo.core.collect.HashMap;
 import com.foo.core.collect.Stack;
+import com.foo.core.instance.MaxSumSubArray;
 import com.foo.core.instance.SumTwoSub;
 import com.foo.core.sort.InsertSort;
 import com.foo.core.sort.QuickSort;
 
 public class Test {
     public static void main(String[] args) {
-        insertSort();
+        maxSumSubArray();
 
     }
 
@@ -63,5 +64,10 @@ public class Test {
         InsertSort insertSort = new InsertSort(b);
         insertSort.sort();
         System.out.println(b);
+    }
+    public static void maxSumSubArray(){
+        int[] b = {1, 9, -6, 3, -7,4, 5,-2};
+        MaxSumSubArray maxSumSubArray = new MaxSumSubArray(b);
+        maxSumSubArray.find();
     }
 }
