@@ -8,7 +8,7 @@ import com.foo.core.sort.InsertSort;
 
 public class Test {
     public static void main(String[] args) {
-        binarySearch();
+        graph();
 
     }
 
@@ -103,5 +103,16 @@ public class Test {
         int[] b = {1, 9, -6, 3, -7, 4, 5, -2};
         BinarySearch binarySearch = new BinarySearch(b);
         System.out.println(binarySearch.search(9));
+    }
+
+    public static void graph(){
+        int[] vertexes={0,1,2,3};
+        Graph graph = new Graph(vertexes);
+        graph.addEdge(0,1);
+        graph.addEdge(0,2);
+        graph.addEdge(0,3);
+        graph.addEdge(1,2);
+        graph.addEdge(3,1);
+        graph.printMatrix();
     }
 }
