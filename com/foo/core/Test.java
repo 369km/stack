@@ -3,11 +3,12 @@ package com.foo.core;
 import com.foo.core.collect.*;
 import com.foo.core.instance.MaxSumSubArray;
 import com.foo.core.instance.SumTwoSub;
+import com.foo.core.search.BinarySearch;
 import com.foo.core.sort.InsertSort;
 
 public class Test {
     public static void main(String[] args) {
-        stack2Queue();
+        binarySearch();
 
     }
 
@@ -96,5 +97,11 @@ public class Test {
         System.out.println(queue.pop());
         System.out.println(queue.pop());
         System.out.println(queue.pop());
+    }
+
+    public static void binarySearch(){
+        int[] b = {1, 9, -6, 3, -7, 4, 5, -2};
+        BinarySearch binarySearch = new BinarySearch(b);
+        System.out.println(binarySearch.search(9));
     }
 }
